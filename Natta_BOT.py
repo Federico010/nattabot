@@ -16,7 +16,7 @@
 import sys, time
 import telepot
 from telepot.loop import MessageLoop
-from pprint import pprint
+#from pprint import pprint
 
 gisella =open('gisella.tgs', 'rb')
 comandi = 'QUESTO E\' IL BOT TELEGRAM UFFICIALE DEL NATTA\nI comandi sono:\n/help --> per visuallizare questo messaggio\n/orario --> per scaricare l\'orario di quest\'anno\n/classe --> per visualizzare l\'orario della classe riportata dopo il simbolo / (/3Ben - /2Clm )\n/professore --> per visualizzare l\'orario di lavoro del professore riportato dopo il simbolo (/cognome) /\n/assenza --> per segnalare l\'assenza di un professore. Per farlo basta scrivere affianco al comando il cognome del professore. Le assenze segnalate saranno visibili sul canale AssenzeNatta\n/nattachat --> per visualizzare il canale di discussione della scuola\n/assenzenatta --> per visualizzare il gruppo con le assenze del giorno\n/stickers --> per scaricare gli stikers del Natta\n/risposte --> per visualizzare la lista di risposte date dal bot in caso di digitazione di certe parole\n/modifica --> per scaricare il file del bot creato in python e apportare modifiche. Dopo inviare le modifiche al gruppo NattaHelp\n/aggiungi --> per dirci cosa vorreste aggiungere nel bot\n/segnala --> per segnalare un problema'
@@ -26,7 +26,7 @@ def rispondi(msg):
     comando = msg['text']
     print(msg)
     print(comando)
-    pprint(msg)
+#    pprint(msg)
     
     if comando == '/start':
         bot.sendMessage(chat_id, comandi)
